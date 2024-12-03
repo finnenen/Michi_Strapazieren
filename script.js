@@ -1,3 +1,5 @@
+
+
 const MORSE_CODE_DICT = {
     'A': '.-', 'B': '-...', 'C': '-.-.', 'D': '-..', 'E': '.',
     'F': '..-.', 'G': '--.', 'H': '....', 'I': '..', 'J': '.---',
@@ -44,7 +46,7 @@ function blinkMorse() {
                 morseSequence.push(symbol === '.' ? SHORT_SIGNAL : LONG_SIGNAL);
                 morseSequence.push(0); // Pause between signals
             }
-            morseSequence.push(LONG_SIGNAL); // Pause between letters
+
         }
     }
 
