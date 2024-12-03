@@ -69,8 +69,8 @@ function blinkMorse() {
 function startSpam() {
     abortAction(); // Ensure no other actions are running
     const interval = setInterval(() => {
-        setLampColor(true);
-        currentTimeouts.push(setTimeout(() => setLampColor(false), 100));
+        toggleLight(true);
+        currentTimeouts.push(setTimeout(() => toggleLight(false), 100));
     }, 200);
     currentTimeouts.push(interval);
 
@@ -83,7 +83,4 @@ function abortAction() {
     // Clear all active timeouts and intervals
     currentTimeouts.forEach(timeout => clearTimeout(timeout));
     currentTimeouts = [];
-
-    // Turn off the lamp visualization and reset the light
-    setLampColor(false);
 }
