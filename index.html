@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Michi Strapazieren</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Angriff auf Michis Lampe</h1>
+        <div class="lamp" id="lamp"></div>
+        <textarea id="message" placeholder="Nachricht an Michi ..."></textarea>
+        <p id="friendly-note">Bitte freundlich bleiben 😊</p>
+        <div class="buttons">
+            <button onclick="blinkMorse()">Morsen</button>
+            <button onclick="startSpam()">Abfuck-Spam</button>
+            <button onclick="toggleLight(true)">Lampe an</button>
+            <button onclick="toggleLight(false)">Lampe aus</button>
+            <button onclick="abortAction()">Abbruch</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
