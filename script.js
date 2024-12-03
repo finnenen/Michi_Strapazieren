@@ -1,5 +1,3 @@
-
-
 const MORSE_CODE_DICT = {
     'A': '.-', 'B': '-...', 'C': '-.-.', 'D': '-..', 'E': '.',
     'F': '..-.', 'G': '--.', 'H': '....', 'I': '..', 'J': '.---',
@@ -56,9 +54,9 @@ function blinkMorse() {
 
         const duration = sequence.shift();
         if (duration > 0) {
-            setLampColor(true);
+            toggleLight(true);
             currentTimeouts.push(setTimeout(() => {
-                setLampColor(false);
+                toggleLight(false);
                 currentTimeouts.push(setTimeout(() => blink(sequence), 200));
             }, duration));
         } else {
@@ -88,7 +86,4 @@ function abortAction() {
 
     // Turn off the lamp visualization and reset the light
     setLampColor(false);
-    fetch("https://theramatch.de/gpio?state=LOW")
-        .then(() => console.log("Alle Aktionen abgebrochen und Lampe ausgeschaltet"))
-        .catch(err => console.error("Fehler beim Abbruch:", err));
 }
